@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_layout"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:background="@drawable/deign"
+            android:textColorHint="#9A9A9A"
+            android:hint="Enter Your Name "
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/enter_age"
+            android:layout_width="wrap_content"
+            android:text="Enter Age"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/back"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:id="@+id/rg_age"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_choice_one"
+                android:layout_width="wrap_content"
+                android:text="15-20"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rb_choice_tow"
+                android:layout_width="wrap_content"
+                android:text="21-40"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rb_choice_three"
+                android:layout_width="wrap_content"
+                android:text="40-60"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+        <TextView
+            android:id="@+id/enter_gender"
+            android:layout_width="wrap_content"
+            android:text="Enter Gender"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/back"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Male"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Female"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/programlang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="Programming languages"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/back"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cb_1"
+                android:layout_width="wrap_content"
+                android:text="Java"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_2"
+                android:layout_width="wrap_content"
+                android:text="Kotlin"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_3"
+                android:layout_width="wrap_content"
+                android:text="Python"
+                android:textSize="20sp"
+                android:buttonTint="@color/blue"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_4"
+                android:layout_width="wrap_content"
+                android:text="C++"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cb_5"
+                android:layout_width="wrap_content"
+                android:text="HTML"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/blue"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_6"
+                android:layout_width="wrap_content"
+                android:text="C++"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:buttonTint="@color/blue"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_7"
+                android:layout_width="wrap_content"
+                android:text="JavaScript"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:buttonTint="@color/blue"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Save"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_design2"
+            android:textSize="20sp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:text="textview"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>
