@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,108 +51,117 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
-                if (rb_one.isChecked()){
-                    tv_result.setText("Young");
-                }else if (rb_tow.isChecked()){
-                    tv_result.setText("Youths");
-                }else if(rb_three.isChecked()){
-                    tv_result.setText("Older");
+
+
+                if (!ed_name.getText().toString().equals("") &&(rb_one.isChecked()||rb_tow.isChecked()||rb_three.isChecked())&&(cb_1.isChecked()||cb_2.isChecked()||cb_3.isChecked()
+                ||cb_4.isChecked()||cb_5.isChecked()||cb_6.isChecked()||cb_7.isChecked())){
+
+                    if (rb_one.isChecked()){
+                        tv_result.setText("Young");
+                    }else if (rb_tow.isChecked()){
+                        tv_result.setText("Youths");
+                    }else if(rb_three.isChecked()){
+                        tv_result.setText("Older");
+                    }else {
+                        tv_result.setText("NO Selected");
+
+                    }
+
+                    if (flag){
+                        main_lay.setBackgroundColor(getResources().getColor(R.color.back));
+                        toolbar.setBackgroundResource(R.drawable.toolbar_deign2);
+                        btn_save.setBackgroundResource(R.drawable.btn_design3);
+                        rb_one.setTextColor(getResources().getColor(R.color.white));
+                        rb_tow.setTextColor(getResources().getColor(R.color.white));
+                        rb_three.setTextColor(getResources().getColor(R.color.white));
+                        rb_male.setTextColor(getResources().getColor(R.color.white));
+                        rb_female.setTextColor(getResources().getColor(R.color.white));
+                        cb_1.setTextColor(getResources().getColor(R.color.white));
+                        cb_2.setTextColor(getResources().getColor(R.color.white));
+                        cb_3.setTextColor(getResources().getColor(R.color.white));
+                        cb_4.setTextColor(getResources().getColor(R.color.white));
+                        cb_5.setTextColor(getResources().getColor(R.color.white));
+                        cb_6.setTextColor(getResources().getColor(R.color.white));
+                        cb_7.setTextColor(getResources().getColor(R.color.white));
+                        tv_result.setTextColor(getResources().getColor(R.color.white));
+                        tv_enterage.setTextColor(getResources().getColor(R.color.white));
+                        tv_entergender.setTextColor(getResources().getColor(R.color.white));
+                        tv_proglang.setTextColor(getResources().getColor(R.color.white));
+                        ed_name.setBackgroundResource(R.drawable.deign2);
+                        rb_one.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        rb_tow.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        rb_three.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        rb_male.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        rb_female.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_1.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_2.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_3.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_4.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_5.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_6.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+                        cb_7.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+
+
+
+
+                        flag=false;
+                    }else {
+                        main_lay.setBackgroundColor(getResources().getColor(R.color.white));
+                        toolbar.setBackgroundResource(R.drawable.toolbar_deign);
+                        btn_save.setBackgroundResource(R.drawable.btn_design2);
+                        rb_one.setTextColor(getResources().getColor(R.color.black));
+                        rb_tow.setTextColor(getResources().getColor(R.color.black));
+                        rb_three.setTextColor(getResources().getColor(R.color.black));
+                        rb_male.setTextColor(getResources().getColor(R.color.black));
+                        rb_female.setTextColor(getResources().getColor(R.color.black));
+                        cb_1.setTextColor(getResources().getColor(R.color.black));
+                        cb_2.setTextColor(getResources().getColor(R.color.black));
+                        cb_3.setTextColor(getResources().getColor(R.color.black));
+                        cb_4.setTextColor(getResources().getColor(R.color.black));
+                        cb_5.setTextColor(getResources().getColor(R.color.black));
+                        cb_6.setTextColor(getResources().getColor(R.color.black));
+                        cb_7.setTextColor(getResources().getColor(R.color.black));
+                        tv_result.setTextColor(getResources().getColor(R.color.black));
+                        tv_enterage.setTextColor(getResources().getColor(R.color.black));
+                        tv_entergender.setTextColor(getResources().getColor(R.color.black));
+                        tv_proglang.setTextColor(getResources().getColor(R.color.black));
+                        ed_name.setBackgroundResource(R.drawable.deign);
+                        rb_one.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        rb_tow.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        rb_three.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        rb_male.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        rb_female.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_1.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_2.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_3.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_4.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_5.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_6.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+                        cb_7.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
+
+                        flag=true;
+                    }
+
+
+
+
+
+
+                    ed_name.setText("");
+                    rg_gender.clearCheck();
+                    rg_age.clearCheck();
+                    cb_1.setChecked(false);
+                    cb_2.setChecked(false);
+                    cb_3.setChecked(false);
+                    cb_4.setChecked(false);
+                    cb_5.setChecked(false);
+                    cb_6.setChecked(false);
+                    cb_7.setChecked(false);
+
+
                 }else {
-                    tv_result.setText("NO Selected");
-
+                    Toast.makeText(MainActivity.this, "Enter All", Toast.LENGTH_SHORT).show();
                 }
-
-                if (flag){
-                    main_lay.setBackgroundColor(getResources().getColor(R.color.back));
-                    toolbar.setBackgroundResource(R.drawable.toolbar_deign2);
-                    btn_save.setBackgroundResource(R.drawable.btn_design3);
-                    rb_one.setTextColor(getResources().getColor(R.color.white));
-                    rb_tow.setTextColor(getResources().getColor(R.color.white));
-                    rb_three.setTextColor(getResources().getColor(R.color.white));
-                    rb_male.setTextColor(getResources().getColor(R.color.white));
-                    rb_female.setTextColor(getResources().getColor(R.color.white));
-                    cb_1.setTextColor(getResources().getColor(R.color.white));
-                    cb_2.setTextColor(getResources().getColor(R.color.white));
-                    cb_3.setTextColor(getResources().getColor(R.color.white));
-                    cb_4.setTextColor(getResources().getColor(R.color.white));
-                    cb_5.setTextColor(getResources().getColor(R.color.white));
-                    cb_6.setTextColor(getResources().getColor(R.color.white));
-                    cb_7.setTextColor(getResources().getColor(R.color.white));
-                    tv_result.setTextColor(getResources().getColor(R.color.white));
-                    tv_enterage.setTextColor(getResources().getColor(R.color.white));
-                    tv_entergender.setTextColor(getResources().getColor(R.color.white));
-                    tv_proglang.setTextColor(getResources().getColor(R.color.white));
-                    ed_name.setBackgroundResource(R.drawable.deign2);
-                    rb_one.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    rb_tow.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    rb_three.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    rb_male.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    rb_female.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_1.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_2.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_3.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_4.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_5.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_6.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-                    cb_7.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.red)));
-
-
-
-
-                    flag=false;
-                }else {
-                    main_lay.setBackgroundColor(getResources().getColor(R.color.white));
-                    toolbar.setBackgroundResource(R.drawable.toolbar_deign);
-                    btn_save.setBackgroundResource(R.drawable.btn_design2);
-                    rb_one.setTextColor(getResources().getColor(R.color.black));
-                    rb_tow.setTextColor(getResources().getColor(R.color.black));
-                    rb_three.setTextColor(getResources().getColor(R.color.black));
-                    rb_male.setTextColor(getResources().getColor(R.color.black));
-                    rb_female.setTextColor(getResources().getColor(R.color.black));
-                    cb_1.setTextColor(getResources().getColor(R.color.black));
-                    cb_2.setTextColor(getResources().getColor(R.color.black));
-                    cb_3.setTextColor(getResources().getColor(R.color.black));
-                    cb_4.setTextColor(getResources().getColor(R.color.black));
-                    cb_5.setTextColor(getResources().getColor(R.color.black));
-                    cb_6.setTextColor(getResources().getColor(R.color.black));
-                    cb_7.setTextColor(getResources().getColor(R.color.black));
-                    tv_result.setTextColor(getResources().getColor(R.color.black));
-                    tv_enterage.setTextColor(getResources().getColor(R.color.black));
-                    tv_entergender.setTextColor(getResources().getColor(R.color.black));
-                    tv_proglang.setTextColor(getResources().getColor(R.color.black));
-                    ed_name.setBackgroundResource(R.drawable.deign);
-                    rb_one.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    rb_tow.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    rb_three.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    rb_male.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    rb_female.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_1.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_2.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_3.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_4.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_5.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_6.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-                    cb_7.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.blue)));
-
-                    flag=true;
-                }
-
-
-
-
-
-
-                ed_name.setText("");
-                rg_gender.clearCheck();
-                rg_age.clearCheck();
-                cb_1.setChecked(false);
-                cb_2.setChecked(false);
-                cb_3.setChecked(false);
-                cb_4.setChecked(false);
-                cb_5.setChecked(false);
-                cb_6.setChecked(false);
-                cb_7.setChecked(false);
-
 
             }
         });
